@@ -4,11 +4,12 @@ import { api } from "~/utils/api";
 
 import "~/styles/globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
+import { ukUA } from "@clerk/localizations";
 import Header from "~/components/Header";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-    <ClerkProvider {...pageProps}>
+    <ClerkProvider localization={ukUA} {...pageProps}>
       <Component {...pageProps} />
     </ClerkProvider>
   );
