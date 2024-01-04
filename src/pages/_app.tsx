@@ -10,7 +10,10 @@ import Header from "~/components/Header";
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <ClerkProvider localization={ukUA} {...pageProps}>
-      <Component {...pageProps} />
+      <Header />
+      <main className="min-h-screen bg-gradient-to-b from-[#2e026d] to-[#15162c]">
+        <Component {...pageProps} />
+      </main>
     </ClerkProvider>
   );
 };

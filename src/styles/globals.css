@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* TODO - move this style to a seprate file */
+#firstSubmenuCol {
+  position: relative;
+}
+
+#secondSubmenuCol {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  display: none;
+}
+
+#firstSubmenuCol:hover #secondSubmenuCol {
+  display: block;
+}
+
+#thirdSubmenuCol {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  display: none;
+}
+
+#secondSubmenuCol:hover #thirdSubmenuCol {
+  display: block;
+}
